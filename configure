@@ -184,8 +184,8 @@ fi
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$SETUP_DIR/lib/pkgconfig
 
 # openblas
-if [ "true" == "$USE_OPENBLAS" ]
-then
+#if [ "true" == "$USE_OPENBLAS" ]
+#then
 	#obenblas will not be installed.
 	#_OPENBLAS='true'
 	#     _OPENBLAS='false'
@@ -199,7 +199,7 @@ then
 	#	echo "OpenBLAS FOUND in [$_LOCATION]"
 	#	_OPENBLAS='true'
 		# fi
-fi
+#fi
 if [ -n "$OPENBLAS_ROOT" ] && [ -d "$OPENBLAS_ROOT" ]; 
 then
 	echo "OpenBLAS FOUND in [$OPENBLAS_ROOT]"
