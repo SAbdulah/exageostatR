@@ -240,7 +240,7 @@ then
 		err=1
 	fi
 fi
-fi
+
 
 # gsl
 if pkg-config --exists --atleast-version=2 gsl
