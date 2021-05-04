@@ -212,8 +212,8 @@ then
 	then
 		echo "Building OpenBLAS..."
 		cd $TMPDIR
-		wget https://github.com/xianyi/OpenBLAS/archive/v0.3.7.tar.gz -O - | tar -zx
-		cd OpenBLAS-0.3.7
+		wget https://github.com/xianyi/OpenBLAS/releases/download/v0.3.15/OpenBLAS-0.3.15.tar.gz -O - | tar -zx
+		cd  OpenBLAS-0.3.15/
 		$MAKE -j PREFIX=$PREFIX >/dev/null|| $MAKE PREFIX=$PREFIX || { echo 'OpenBLAS installation failed' ; exit 1; }
 		$MAKE install PREFIX=$PREFIX
 		export CPATH=$PREFIX/include:$CPATH
