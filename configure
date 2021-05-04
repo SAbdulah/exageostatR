@@ -177,6 +177,7 @@ else
 	echo "MKL not found, trying to compile and use OpenBLAS"
 	#XFLAG="-DBLA_VENDOR=Open"
 	USE_OPENBLAS='true'
+	 _OPENBLAS='false'
 fi
 
 #set pkgconfig path including possible installation dir
