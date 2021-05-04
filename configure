@@ -227,7 +227,8 @@ then
 		echo $PKG_LIBS
 		echo "+++++++++++++++++++++++++="
 		export OPENBLAS_ROOT=$PREFIX
-		export DEFINE_BLAS_LIBS_CMAKE=" -DBLAS_LIBRARIES='-L${OPENBLAS_ROOT}/lib;-lopenblas;-lpthread;-lm;-ldl' -DBLAS_COMPILER_FLAGS='-m64;-I${OPENBLAS_ROOT}/include'  -DCBLAS_DIR='${OPENBLAS_ROOT}'"
+		export LAPACK_ROOT=/usr/lib/x86_64-linux-gnu/
+		export DEFINE_BLAS_LIBS_CMAKE=" -DBLAS_LIBRARIES='-L${OPENBLAS_ROOT}/lib;-lopenblas;-lpthread;-lm;-ldl' -DBLAS_COMPILER_FLAGS='-m64;-I${OPENBLAS_ROOT}/include'  -DCBLAS_DIR='${OPENBLAS_ROOT}' -DLAPACK_DIR='${LAPACK_ROOT}' -DLAPACKE_DIR='${LAPACK_ROOT}'"
 		export OPENBLAS_CFLAGS=-I$PREFIX/include
 		export OPENBLAS_LIBS=-L$PREFIX/lib
 		export BLAS_OPENBLAS_CFLAGS=-I{$PREFIX/include
