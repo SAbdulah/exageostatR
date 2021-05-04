@@ -224,7 +224,7 @@ then
 		echo "========================="
 		echo $PKG_LIBS
 		echo "+++++++++++++++++++++++++="
-		#DEFINE_BLAS_LIBS_CMAKE="-DBLAS_DIR='${PREFIX}'  -DCBLAS_DIR='${PREFIX}' -DLAPACK_DIR='${PREFIX}' -DLAPACKE_DIR='${PREFIX}' -DTMG='${PREFIX}'"
+		DEFINE_BLAS_LIBS_CMAKE="-DBLAS_DIR='${PREFIX}'  -DCBLAS_DIR='${PREFIX}' -DLAPACK_DIR='${PREFIX}' -DLAPACKE_DIR='${PREFIX}' -DTMG='${PREFIX}'"
 		#export OPENBLAS_CFLAGS=-I$PREFIX/include
 		#export OPENBLAS_LIBS=-L$PREFIX/lib
 		#export BLAS_OPENBLAS_CFLAGS=-I{$PREFIX/include
