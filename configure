@@ -187,17 +187,17 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$SETUP_DIR/lib/pkgconfig
 if [ "true" == "$USE_OPENBLAS" ]
 then
 	#obenblas will not be installed.
-	_OPENBLAS='true'
+	#_OPENBLAS='true'
 	#     _OPENBLAS='false'
-	if pkg-config --exists openblas
-	then
+	#if pkg-config --exists openblas
+	#then
 		#check for lapacke.h
 		#    _LOCATION=`pkg-config --variable=includedir openblas`
 		#    if stat "${_LOCATION}/lapacke.h" >/dev/null 2>&1
 		#   then
-		_LOCATION=`pkg-config --variable=libdir openblas`
-		echo "OpenBLAS FOUND in [$_LOCATION]"
-		_OPENBLAS='true'
+	#	_LOCATION=`pkg-config --variable=libdir openblas`
+	#	echo "OpenBLAS FOUND in [$_LOCATION]"
+	#	_OPENBLAS='true'
 		# fi
 fi
 if [ -n "$OPENBLAS_ROOT" ] && [ -d "$OPENBLAS_ROOT" ]; 
