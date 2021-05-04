@@ -218,6 +218,7 @@ then
 		$MAKE install PREFIX=$PREFIX
 		export CPATH=$PREFIX/include:$CPATH
 		export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH
+		export LD_LIBRARY_PATH=$PREFIX/lib:$LD_LIBRARY_PATH
 		OPENBLAS_CFLAGS=`pkg-config --variable=includedir openblas`
 		OPENBLAS_LIBS=`pkg-config --variable=libdir openblas`
 		PKG_CPPFLAGS=`pkg-config --variable=includedir openblas`
@@ -225,10 +226,10 @@ then
 		echo "========================="
 		echo $PKG_LIBS
 		echo "+++++++++++++++++++++++++="
-		DEFINE_BLAS_LIBS_CMAKE="-DBLAS_DIR='${PREFIX}'  -DCBLAS_DIR='${PREFIX}' -DLAPACK_DIR='${PREFIX}' -DLAPACKE_DIR='${PREFIX}' -DTMG='${PREFIX}' -DBLAS_LIBRARIES='-L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib'"
-		#export OPENBLAS_CFLAGS=-I$PREFIX/include
-		#export OPENBLAS_LIBS=-L$PREFIX/lib
-		#export BLAS_OPENBLAS_CFLAGS=-I{$PREFIX/include
+		DEFINE_BLAS_LIBS_CMAKE="-DBLAS_DIR='${PREFIX}'  -DCBLAS_DIR='${PREFIX}' -DLAPACK_DIR='${PREFIX}' -DLAPACKE_DIR='${PREFIX}' -DTMG='${PREFIX}'"
+		export OPENBLAS_CFLAGS=-I$PREFIX/include
+		export OPENBLAS_LIBS=-L$PREFIX/lib
+		export BLAS_OPENBLAS_CFLAGS=-I{$PREFIX/include
 		export BLAS_OPENBLAS_LIBS=-l$PREFIX/lib/libopenblas.so
 		#cp $PREFIX/lib/libopenblas.so $BASEDIR/src
 		#export BLAS_LIBS=-L{$PREFIX}/lib
